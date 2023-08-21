@@ -75,7 +75,7 @@ var Sum = 0;
 
 // d. Return all the prime numbers in an array
 //Anonymous Function
-var arr4 = [1,4,5,6,7,9,13,15,18,19,23];
+var arr4 = [1,4,5,6,7,9,13,15,18,19,];
 var Prime = "";
 var Result4=function(arr4){
 for(var i=0;i<arr4.length;i++){
@@ -86,6 +86,27 @@ for(var i=0;i<arr4.length;i++){
 return Prime;
    }
    console.log((Result4(arr4)).trim());
+ // IIFE Function
+ var arr4=[1,2,3,4,7,13,11,16,19];
+ var prime = [];
+(function Result4(arr4){
+ for(var i=0;i<arr4.length;i++){
+   var count=0;
+  if(arr4[i]<1){
+     break;//not a prime
+ }
+ for(var j=2;j<=arr4[i];j++){
+  if(arr4[i]%j==0){
+     count++
+  }
+ }
+   if(count<2){
+  prime.push(arr4[i]);
+   }
+ }
+ console.log(prime);
+ })(arr4);
+
 
 // e. Return all the Palindromes in an array
 //Anonymous Function
