@@ -1,3 +1,4 @@
+
 // 2. Do the below programs in arrow function:
 
 // a. Print Odd Numbers in an array
@@ -40,29 +41,28 @@ var Result3=()=>{
    return Sum;
  }
  console.log(Result3(arr3));
-
+ 
 // d. Return all the prime numbers in an array
 // Arrow Function
- var arr4 = [1,4,5,6,7,9,13,15,18,19,23];
-var Prime = "";
- var Result4=()=>{
-  for(var i=0;i<arr4.length;i++){
-    var count=0;
+ var arr4=[1,2,3,4,7,13,11,16,19];
+ var prime = [];
+(function Result4(arr4){
+ for(var i=0;i<arr4.length;i++){
+   var count=0;
   if(arr4[i]<1){
-    break;//not a prime
-  }
+     break;//not a prime
+ }
  for(var j=2;j<=arr4[i];j++){
   if(arr4[i]%j==0){
-    count++
+     count++
   }
  }
    if(count<2){
-     prime.push(arr4[i]);
+  prime.push(arr4[i]);
    }
  }
-return prime;
-}
- console.log(Result4(arr4));    
+ console.log(prime);
+ })(arr4);
 
 // e. Return all the Palindromes in an array
 // Arrow Function
