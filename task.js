@@ -229,3 +229,4 @@ var k;
    }
    console.log(arr6);
  })(arr6,2);
+
